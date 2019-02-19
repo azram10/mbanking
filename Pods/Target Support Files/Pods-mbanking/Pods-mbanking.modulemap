@@ -1,0 +1,6 @@
+module Pods_mbanking {
+  umbrella header "Pods-mbanking-umbrella.h"
+
+  export *
+  module * { export * }
+}

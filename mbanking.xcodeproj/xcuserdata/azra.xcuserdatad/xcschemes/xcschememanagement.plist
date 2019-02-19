@@ -7,7 +7,44 @@
 		<key>mbanking.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>mbankingTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>mbankingUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>67921FB82212DBEA004B84CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67921FCF2212DBEC004B84CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67921FDA2212DBEC004B84CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67921FF022134F20004B84CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
