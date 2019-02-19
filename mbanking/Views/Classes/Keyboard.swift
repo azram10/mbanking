@@ -35,6 +35,7 @@ class Keyboard: UIView {
         let view = Bundle.main.loadNibNamed(xibFileName, owner: self, options: nil)?[0] as! UIView
         if let backButton = view.viewWithTag(11) as? UIButton {
             let image = UIImage(named: "delete.png")?.withRenderingMode(.alwaysTemplate)
+            backButton.imageEdgeInsets = UIEdgeInsets(top: backButton.frame.size.height * 0.3, left: backButton.frame.size.width * 0.4, bottom: backButton.frame.size.height * 0.3, right: backButton.frame.size.width * 0.4)
             backButton.setImage(image, for: .normal)
             backButton.tintColor = UIColor.keyboardText()
         }

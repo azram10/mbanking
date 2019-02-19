@@ -100,12 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         UINavigationBar.appearance().backgroundColor = UIColor.appColor()
         UINavigationBar.appearance().isTranslucent = false
-        
-        let backImg: UIImage = UIImage(named: "back")!
-        UINavigationBar.appearance().backIndicatorImage = backImg.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImg.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         UIBarButtonItem.appearance().tintColor = UIColor.white
-        
         UINavigationBar.appearance().barStyle = .blackOpaque
     }
 }

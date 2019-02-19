@@ -173,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				67FE7A1D221AB1B400F10C71 /* CustomButton.swift */,
-				67FE7A1F221AE80B00F10C71 /* KeyboardButton.swift */,
 				674109AE2215929700E382E8 /* Keychain.swift */,
 			);
 			path = Classes;
@@ -195,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				679034F4221402CA00570289 /* Keyboard.swift */,
+				67FE7A1F221AE80B00F10C71 /* KeyboardButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

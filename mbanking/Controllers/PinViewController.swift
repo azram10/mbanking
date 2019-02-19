@@ -27,7 +27,7 @@ class PinViewController: UIViewController, KeyboardDelegate {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         let keyboardView = Keyboard(frame: CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height * 3/5))
         keyboardView.delegate = self
-        self.viewBottomConstraint.constant = keyboardView.frame.size.height - viewBottomConstraint.constant
+        self.viewBottomConstraint.constant = keyboardView.frame.size.height + 10
         self.pinTextField.setLeftPaddingPoints(10)
         self.pinTextField.inputView = keyboardView
         self.pinTextField.becomeFirstResponder()
@@ -56,7 +56,7 @@ class PinViewController: UIViewController, KeyboardDelegate {
     
     func validatePin() -> Bool {
         if self.pinTextField.text == "" || self.pinTextField.text!.count < 4 || self.pinTextField.text!.count > 6  {
-            AlertManager.sharedInstance.createAlert("Warning", message: "Pin must be within 4 and 6 numbers", controller: self)
+            AlertManager.sharedInstance.createAlert("Error", message: "Pin must be within 4 and 6 numbers", controller: self)
             return false
         }
         return true
