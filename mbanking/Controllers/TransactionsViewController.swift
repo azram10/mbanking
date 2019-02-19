@@ -41,7 +41,7 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.accountId = self.data.keys.first
+        self.accountId = self.data.keys.sorted().first
 
         self.loadData()
         self.setViews()

@@ -85,12 +85,13 @@ class RequestManager: NSObject {
             case .success:
                 let responseData = JSON(response.result.value!)
                 
-                guard let parsedData = responseData["acounts"].to(type: AccountMapper.self), let accounts = parsedData as? [AccountMapper]  else {
+                guard let parsedData = responseData["acounts"].to(type: AccountMapper.self), var accounts = parsedData as? [AccountMapper]  else {
                     completionHandler(nil, NSError(domain: "", code: NSURLErrorBadServerResponse
 , userInfo: nil))
                     return
                 }
-                for account in accounts.reversed() {
+                for account in accounts {
+                    accounts.removeFirst()
                     data[account.id] = Account(account: account)
                 }
                 completionHandler(data, nil)
