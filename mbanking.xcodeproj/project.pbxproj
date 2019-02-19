@@ -13,7 +13,6 @@
 		679034F5221402CA00570289 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679034F4221402CA00570289 /* Keyboard.swift */; };
 		67921FBD2212DBEA004B84CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67921FBC2212DBEA004B84CF /* AppDelegate.swift */; };
 		67921FBF2212DBEA004B84CF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67921FBE2212DBEA004B84CF /* RegisterViewController.swift */; };
-		67921FC52212DBEA004B84CF /* mbanking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67921FC32212DBEA004B84CF /* mbanking.xcdatamodeld */; };
 		67921FC72212DBEC004B84CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67921FC62212DBEC004B84CF /* Assets.xcassets */; };
 		67921FCA2212DBEC004B84CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67921FC82212DBEC004B84CF /* LaunchScreen.storyboard */; };
 		679930C62219A25500C3E258 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679930C52219A25500C3E258 /* LoginController.swift */; };
@@ -57,7 +56,6 @@
 		67921FB92212DBEA004B84CF /* mbanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mbanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67921FBC2212DBEA004B84CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67921FBE2212DBEA004B84CF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		67921FC42212DBEA004B84CF /* mbanking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mbanking.xcdatamodel; sourceTree = "<group>"; };
 		67921FC62212DBEC004B84CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67921FC92212DBEC004B84CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67921FCB2212DBEC004B84CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				67FE7A16221AB0E700F10C71 /* Views */,
 				67921FBC2212DBEA004B84CF /* AppDelegate.swift */,
 				67921FCB2212DBEC004B84CF /* Info.plist */,
-				67921FC32212DBEA004B84CF /* mbanking.xcdatamodeld */,
 			);
 			path = mbanking;
 			sourceTree = "<group>";
@@ -316,7 +313,6 @@
 				67FE7A1E221AB1B400F10C71 /* CustomButton.swift in Sources */,
 				674109AC2214DC0F00E382E8 /* Colors.swift in Sources */,
 				679930C62219A25500C3E258 /* LoginController.swift in Sources */,
-				67921FC52212DBEA004B84CF /* mbanking.xcdatamodeld in Sources */,
 				67A6C9D92216F935004D935D /* Utils.swift in Sources */,
 				679034F5221402CA00570289 /* Keyboard.swift in Sources */,
 				67A6C9D722160EC3004D935D /* Spinner.swift in Sources */,
@@ -531,19 +527,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		67921FC32212DBEA004B84CF /* mbanking.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				67921FC42212DBEA004B84CF /* mbanking.xcdatamodel */,
-			);
-			currentVersion = 67921FC42212DBEA004B84CF /* mbanking.xcdatamodel */;
-			path = mbanking.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 67921FB12212DBEA004B84CF /* Project object */;
 }
