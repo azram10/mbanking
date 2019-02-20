@@ -55,7 +55,7 @@ class PinViewController: UIViewController, KeyboardDelegate {
     // end required methods for keyboard delegate protocol
     
     func validatePin() -> Bool {
-        if self.pinTextField.text == "" || self.pinTextField.text!.count < 4 || self.pinTextField.text!.count > 6  {
+        if self.pinTextField.text == "" || self.pinTextField.text!.count < 4 || self.pinTextField.text!.count > 6 || !self.pinTextField.text!.isNumeric() {
             AlertManager.sharedInstance.createAlert("Error", message: "Pin must be within 4 and 6 numbers", controller: self)
             return false
         }

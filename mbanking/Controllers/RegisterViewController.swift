@@ -91,4 +91,8 @@ extension String {
         return self.range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
     }
     
+    func isNumeric() -> Bool {
+        return self.range(of: "[^0-9]", options: .regularExpression) == nil
+    }
+    
 }
