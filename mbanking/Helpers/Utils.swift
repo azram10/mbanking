@@ -66,4 +66,10 @@ class Utils: NSObject {
             $0 + String(format: "%02x", digest[$1])
         }
     }
+    
+    static func createAttributedText(_ title: String, subtitle: String) -> NSMutableAttributedString {
+        let attrString = NSMutableAttributedString(string: title, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0)])
+        attrString.append(NSMutableAttributedString(string: subtitle, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13.0), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
+        return attrString
+    }
 }

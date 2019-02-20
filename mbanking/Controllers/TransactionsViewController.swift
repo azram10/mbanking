@@ -59,9 +59,9 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     func loadData() {
         self.keys = Array(data[accountId!]!.transactions.keys).sorted{ $0 > $1 }
         
-        balanceLabel.text = data[accountId!]!.amount
-        currencyLabel.text = data[accountId!]!.currency
-        ibanLabel.attributedText = self.createAttributedText("IBAN\n", subtitle: data[accountId!]!.iban)
+        self.balanceLabel.text = data[accountId!]!.amount
+        self.currencyLabel.text = data[accountId!]!.currency
+        self.ibanLabel.attributedText = Utils.createAttributedText("IBAN\n", subtitle: data[accountId!]!.iban)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -75,22 +75,8 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let transaction = data[accountId!]!.transactions[self.keys[indexPath.section]]![indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath)
-        
-        if let date = cell.viewWithTag(1) as? UILabel {
-            date.text = Utils.stringFromDate(transaction.date, toFormat: "d.")
-        }
-        if let descriptionLabel = cell.viewWithTag(2) as? UILabel {
-            descriptionLabel.attributedText = self.createAttributedText(transaction.description, subtitle: transaction.type != nil ? "\n" + transaction.type! : "")
-        }
-        if let amountLabel = cell.viewWithTag(3) as? UILabel {
-            if transaction.amount.first == "-" {
-                amountLabel.textColor = UIColor.customRed()
-            } else {
-                amountLabel.textColor = UIColor.customGreen()
-            }
-            amountLabel.text = transaction.amount
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionCell
+        cell.setValues(transaction: transaction)
         
         return cell
     }
@@ -114,10 +100,17 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         return 50
     }
     
-    func createAttributedText(_ title: String, subtitle: String) -> NSMutableAttributedString {
-        let attrString = NSMutableAttributedString(string: title, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0)])
-        attrString.append(NSMutableAttributedString(string: subtitle, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13.0), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
-        return attrString
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let transaction = data[accountId!]!.transactions[self.keys[indexPath.section]]![indexPath.row]
+        self.showDetails(transaction: transaction)
+    }
+    
+    func showDetails(transaction: Transaction) {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "transactionDetailsController") as! TransactionDetailsController
+        controller.transaction = transaction
+        self.navigationController!.addChild(controller)
+        controller.view.frame = self.navigationController!.view.frame
+        self.navigationController?.view.addSubview(controller.view)
     }
     
     func changeAccount() {

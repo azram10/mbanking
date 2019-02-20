@@ -26,10 +26,14 @@
 		67B5662C22146E4F002AC512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B5662A22146E4F002AC512 /* Main.storyboard */; };
 		67B5662E2214BAF9002AC512 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B5662D2214BAF9002AC512 /* PinViewController.swift */; };
 		67B566312214C2CA002AC512 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C086E122146BA500EEA1B4 /* Keyboard.xib */; };
+		67E99F76221D570E00467D37 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E99F75221D570E00467D37 /* TransactionCell.swift */; };
 		67FE7A1E221AB1B400F10C71 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE7A1D221AB1B400F10C71 /* CustomButton.swift */; };
 		67FE7A20221AE80B00F10C71 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE7A1F221AE80B00F10C71 /* KeyboardButton.swift */; };
 		67FE7A22221B03DC00F10C71 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FE7A21221B03DC00F10C71 /* delete.png */; };
 		67FE7A28221C04BA00F10C71 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 67FE7A27221C04BA00F10C71 /* .gitignore */; };
+		67FE7A48221C506800F10C71 /* MBankUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE7A47221C506800F10C71 /* MBankUIApplication.swift */; };
+		67FE7A4A221C528000F10C71 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE7A49221C528000F10C71 /* main.swift */; };
+		67FE7A4C221CAC4B00F10C71 /* TransactionDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE7A4B221CAC4B00F10C71 /* TransactionDetailsController.swift */; };
 		C3F2BBB17F6A7FBE9AECEF1C /* libPods-mbanking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E404F9905402BC8F54EDD /* libPods-mbanking.a */; };
 /* End PBXBuildFile section */
 
@@ -70,10 +74,14 @@
 		67B5662B22146E4F002AC512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67B5662D2214BAF9002AC512 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
 		67C086E122146BA500EEA1B4 /* Keyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		67E99F75221D570E00467D37 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		67FE7A1D221AB1B400F10C71 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		67FE7A1F221AE80B00F10C71 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		67FE7A21221B03DC00F10C71 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		67FE7A27221C04BA00F10C71 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = mbanking/.gitignore; sourceTree = "<group>"; };
+		67FE7A47221C506800F10C71 /* MBankUIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBankUIApplication.swift; sourceTree = "<group>"; };
+		67FE7A49221C528000F10C71 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		67FE7A4B221CAC4B00F10C71 /* TransactionDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsController.swift; sourceTree = "<group>"; };
 		832E404F9905402BC8F54EDD /* libPods-mbanking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mbanking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,6 +156,7 @@
 				67B5662D2214BAF9002AC512 /* PinViewController.swift */,
 				67921FBE2212DBEA004B84CF /* RegisterViewController.swift */,
 				67A6C9DE2218E93E004D935D /* SelectionViewController.swift */,
+				67FE7A4B221CAC4B00F10C71 /* TransactionDetailsController.swift */,
 				67A6C9DA22176C57004D935D /* TransactionsViewController.swift */,
 			);
 			path = Controllers;
@@ -171,6 +180,8 @@
 			children = (
 				67FE7A1D221AB1B400F10C71 /* CustomButton.swift */,
 				674109AE2215929700E382E8 /* Keychain.swift */,
+				67FE7A47221C506800F10C71 /* MBankUIApplication.swift */,
+				67FE7A49221C528000F10C71 /* main.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 			children = (
 				679034F4221402CA00570289 /* Keyboard.swift */,
 				67FE7A1F221AE80B00F10C71 /* KeyboardButton.swift */,
+				67E99F75221D570E00467D37 /* TransactionCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -308,13 +320,17 @@
 			files = (
 				679930CA2219EFE800C3E258 /* RequestManager.swift in Sources */,
 				67A6C9DB22176C57004D935D /* TransactionsViewController.swift in Sources */,
+				67FE7A4A221C528000F10C71 /* main.swift in Sources */,
 				679930C82219C50000C3E258 /* LoginManager.swift in Sources */,
 				679034F322136E4A00570289 /* AlertManager.swift in Sources */,
+				67E99F76221D570E00467D37 /* TransactionCell.swift in Sources */,
+				67FE7A48221C506800F10C71 /* MBankUIApplication.swift in Sources */,
 				67FE7A1E221AB1B400F10C71 /* CustomButton.swift in Sources */,
 				674109AC2214DC0F00E382E8 /* Colors.swift in Sources */,
 				679930C62219A25500C3E258 /* LoginController.swift in Sources */,
 				67A6C9D92216F935004D935D /* Utils.swift in Sources */,
 				679034F5221402CA00570289 /* Keyboard.swift in Sources */,
+				67FE7A4C221CAC4B00F10C71 /* TransactionDetailsController.swift in Sources */,
 				67A6C9D722160EC3004D935D /* Spinner.swift in Sources */,
 				67921FBF2212DBEA004B84CF /* RegisterViewController.swift in Sources */,
 				67921FBD2212DBEA004B84CF /* AppDelegate.swift in Sources */,
